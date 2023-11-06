@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'DM Serif Display', serif;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+@mixin res1($max:768px){
+    @media (max-width: $max){
+        @content;
+    }
+}
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1200px;
+}
+}
+header{
+    background: #536c84;
+    li{
+        font-size:14px;
+    }
+    .b{
+        &:hover{
+            color: rgb(194, 187, 187)  !important;
+        }
+    }
+    .btn-outline-light{
+        font-size: 14px;
+    }
+}
+.active{
+    color: rgb(218, 211, 211) !important;
+}
+.home{
+    background:url(./assets/homebg.jpg);
+    object-fit: contain;
+    .rang{
+        background: #536c84;
+        opacity: 0.72;
+        padding: 150px 0;
+        @include res1{
+            padding: 50px 0;
+        }
+    }
+    h1{
+        @include res1{
+            font-size:50px;
+            padding: 50px 0;
+        }
+        font-size:70px;
+        line-height: 77px;
+    }
+    p{
+        color: rgb(255, 255, 255);
+        padding: 30px 0;
+        @include res1{
+            font-size:15px;
+        }
+        
+    }
+    a{
+        color:black;
+        padding: 15px 30px;
+        font-size: 14px;
+        font-weight: bold;
+        background:white;
+        border-radius: 12px;
+        &:hover{
+            background:black;
+            color:white;
+        }
+    }
+}
+.experience{
+    background:white;
+    padding: 50px 0;
+    p{
+        color: gray;
+        padding: 20px 0;
+    }
+    a{
+        padding: 10px 20px;
+        background:black; 
+        color:white;
+        &:hover{
+            background-color: #1b5374;
+        }
+    }
+    .bold{
+        font-weight: bold;
+    }
+    h1{
+        font-size: 42px;
+        width: 95%;
+        @include res1{
+            font-size:32px;
+            padding-top: 20px;
+        }
+    }
+}
+.fac{
+    background:white;
+    padding: 60px 0;
+    p{
+        @include res1{
+            width: 100%;
+        }
+        width: 50%;
+        padding: 15px 0;
+    }
+    h1{
+        font-size: 42px;
+    }
+    a{
+        color: white;
+        padding:10px 20px;
+        background:black;
+        &:hover{
+            background-color: #1b5374;
+        }
+    }
+    .fbox{
+        @include res1{
+            padding: 15px ;
+        }
+        p{
+            width: 85%;
+        }
+        h3{
+            padding: 15px 0 0 0;
+        }
+        span{
+            a{
+                border-bottom: 2px solid black;
+                background: white;
+                color: black;
+                padding:0;
+                padding-bottom: 5px;
+                
+            }
+        }
+    }
+}
+.inside{
+    @include res1{
+        padding: 10px;
+    }
+    img{ 
+            width:100%;
+            height:auto;
+    }
+}
+.guest{
+    padding-bottom: 50px;
+    @include res1{
+        padding: 10px;
+        
+    }
+    .gbox{
+        p{
+            color: rgb(88, 86, 86);
+        }
+        .nm{
+            font-size: 14px;
+            @include res1{
+                padding-left: 20px;
+            }
+        }
+    }
+    img{ 
+        border-radius: 50%;
+        @include res1{
+            height: 35px;
+            width: 35px !important;
+        }
+    }
+}
+.book{
+    background: url(./assets/bookbg.jpg);
+   
+    .rang{
+        background:#1b5374;
+        opacity: 0.75;
+        padding: 170px 0;
+        @include res1{
+            padding:50px 10px;
+        }
+
+    }
+    h1{
+        width: 45%;
+        @include res1{
+            width: 90%;
+        }
+        margin: auto;
+    }
+}
+footer{ 
+    padding-bottom: 30px;
+    a{
+        color:gray;
+        &:hover{
+            color:black;
+        }
+    }
+    p{
+        color: gray;
+    }
+    @include res1{
+        text-align: center;
+        padding:30px 10px;
+    }
+}
+
+/* Rooms part*/
+.rheader{
+    padding: 150px 0;
+    @include res1{
+        padding:50px 10px;
+    }
+    color: white;
+    background: url(./assets/roombg.jpg);
+    h1{
+        font-size: 70px;
+        @include res1{
+            font-size: 40px;
+        }
+    }
+}
+.stay{
+    img{
+        width: 558px;
+        height:372px;
+        padding-top: 30px;
+        @include res1{
+            width:100%;
+            height:auto;
+        }
+    }
+}
